@@ -1,145 +1,163 @@
 :root {
-    --primary-color: #22254b;
-    --secondary-color: #373b69;
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--secondary-color);
-    align-items: center;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  align-items: center;
 }
 
 header h1 {
-    margin: 0;
-    color: #fff;
+  margin: 0;
+  color: #fff;
 }
 
 .search {
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  width: 225px;
 }
 
 .search::placeholder {
-    color: #7378c5;
+  color: #7378c5;
 }
 
 .search:focus {
-    outline: none;
-    background-color: var(--primary-color);
+  outline: none;
+  background-color: var(--primary-color);
 }
 
 .submit {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--primary-color);
-    background-color: #fff;
-    padding: 10px;
-    margin-right: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    border: 2px solid var(--secondary-color);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid var(--secondary-color);
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--primary-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: calc(100dvh - 75px);
 }
 
 .movie {
-    width: 300px;
-    margin: 1rem;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border-radius: 3px;
-    position: relative;
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
 }
 
 .movie img {
-    width: 100%;
+  width: 100%;
 }
 
 .movie-info {
-    color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    letter-spacing: 0.5px;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .movie-info h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .movie-info span {
-    background-color: var(--primary-color);
-    padding: 3px;
+  background-color: var(--primary-color);
+  padding: 3px;
 }
 
 .movie-info span.green {
-    color: lightgreen;
+  color: lightgreen;
 }
 
 .movie-info span.orange {
-    color: orange;
+  color: orange;
 }
 
 .movie-info span.red {
-    color: lightcoral;
+  color: lightcoral;
 }
 
 .overview {
-    position: absolute;
-    background-color: #fff;
-    padding: 2rem;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    max-height: 100%;
-    transform: translateY(101%);
-    transition: transform 0.3s ease-in;
+  position: absolute;
+  background-color: #fff;
+  padding: 2rem;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
 }
 
 .movie:hover .overview {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
-@media only screen and (min-width:1px) and (max-width:520px) {
-    header {
-        flex-direction: column;
-        padding: 0.5rem;
-    }
+.no-movies {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 400px;
+}
 
-    header h1 {
-        margin: 0 0 15px;
-    }
+.no-movies img {
+  width: 100%;
+}
 
-    .search {
-        padding: 0.5rem 0.5rem;
-        width: 185px;
-    }
+@media only screen and (min-width: 1px) and (max-width: 520px) {
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
 
-    .body-form form {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+  header h1 {
+    margin: 0 0 15px;
+  }
 
-    .body-form {
-        width: 100%;
-    }
+  .search {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+  }
+
+  .body-form form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .body-form {
+    width: 100%;
+  }
 }

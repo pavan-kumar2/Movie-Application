@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Body } from "./components/Body";
+import { MovieCard } from "./components/MovieCard";
 import { Header } from "./components/Header";
 
 
@@ -26,10 +26,12 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <>
       <Header searchApi={searchApi} apiUrl={apiUrl} getApi={getApi} />
-      <Body data={data} imgPath={imgPath} />
-    </div>
+      <main id='main'>
+        {data?.length ? <MovieCard data={data} imgPath={imgPath}></MovieCard> : <div className="no-movies"> <img src="no-films-found.png" alt='no films found' />No Movies Found!</div>}
+      </main>
+    </>
   );
 }
 
