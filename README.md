@@ -11,11 +11,4 @@ A React.js web application that allows users to search for movies, view details,
 ## 🛠️ Technologies Used
 - React.js ⚛️
 - HTML, CSS, JavaScript
-- API Integration (e.g., OMDB or TMDB)
-
-## 📦 Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/pavan-kumar2/Movie-Review-Application.git
-   cd Movie-Review-Application
+- API Integration
